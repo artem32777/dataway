@@ -13,7 +13,6 @@ export default defineNuxtConfig({
 		'@pinia/nuxt',
 		'@nuxt/ui', // Отключаем извлечение CSS в отдельный файл
 		'@nuxt/eslint',
-		'@prisma/nuxt',
 	],
 
 	plugins: [
@@ -155,13 +154,13 @@ export default defineNuxtConfig({
 
 	// fix for vercel build with prisma
 	// https://www.prisma.io/docs/orm/more/help-and-troubleshooting/prisma-nuxt-module
-	vite: {
-		resolve: {
-			alias: {
-				'.prisma/client/index-browser': './node_modules/.prisma/client/index-browser.js',
-			},
-		},
-	},
+	// vite: {
+	// 	resolve: {
+	// 		alias: {
+	// 			'.prisma/client/index-browser': './node_modules/.prisma/client/index-browser.js',
+	// 		},
+	// 	},
+	// },
 
 	typescript: {
 		typeCheck: true,
